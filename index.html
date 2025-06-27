@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myon Walcott - Aspiring Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+            color: #F3F4F6; /* Light gray text */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-card {
+            background-color: #1F2937;
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.1), 0 4px 6px -2px rgba(56, 189, 248, 0.05);
+        }
+        .project-card {
+             background-color: #1F2937;
+             border: 1px solid #374151;
+             overflow: hidden;
+        }
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="40" fill="url(#paint0_linear_101_2)"/>
+                    <path d="M52 140L52 60L84 110L116 60V140" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M148 60L148 140L126 100L148 60Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_101_2" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#38bdf8"/>
+                            <stop offset="1" stop-color="#818cf8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="text-xl font-bold text-white">Myon Walcott</span>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link text-gray-300 font-medium">About</a>
+                <a href="#projects" class="nav-link text-gray-300 font-medium">Projects</a>
+                <a href="#skills" class="nav-link text-gray-300 font-medium">Skills</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block nav-link text-gray-300 font-medium">About</a>
+            <a href="#projects" class="block nav-link text-gray-300 font-medium">Projects</a>
+            <a href="#skills" class="block nav-link text-gray-300 font-medium">Skills</a>
+            <a href="#contact" class="block bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition-colors text-center">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-24">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">
+                From Community Service to <span class="gradient-text">Code</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                I'm Myon Walcott, a dedicated and disciplined professional transitioning from law enforcement and personal training into the world of computer science. I build intuitive and impactful digital experiences.
+            </p>
+            <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors">View My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                     <!-- CORRECTED: Changed file extension from .jpg to .jpeg to match your file -->
+                     <img src="pictures/profile.jpeg" 
+                         alt="Myon Walcott" 
+                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">My Journey</h2>
+                    <p class="text-gray-300 mb-4">
+                        At 24, my path has been anything but ordinary. Originally from the beautiful island of Saint Lucia, I dedicated years to serving my community as a police officer, where I honed skills in problem-solving under pressure, meticulous attention to detail, and unwavering discipline.
+                    </p>
+                    <p class="text-gray-300 mb-4">
+                        As a certified personal trainer, I learned to motivate others, understand their goals, and create structured plans for success. This focus on human-centered results is something I'm passionate about bringing to the tech industry.
+                    </p>
+                    <p class="text-gray-300">
+                        Now, as a Computer Science student at Humber College, I'm channeling that same dedication into learning how to build robust, user-friendly applications. I believe my unique background gives me a different perspective on creating technology that truly serves people.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Projects</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-1 gap-8">
+                <!-- Project Card 1: Dwive -->
+                <div class="project-card rounded-2xl grid md:grid-cols-2 gap-0">
+                    <div class="p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2 text-white">Dwive Travel Website</h3>
+                        <p class="text-gray-400 mb-4">
+                            A front-end concept for a travel website, showcasing destinations and booking functionalities. This was one of my early projects exploring HTML, CSS, and JavaScript.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">HTML</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">CSS</span>
+                            <span class="bg-gray-700 text-sky-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Myonawalcott/Dwive" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-colors w-full sm:w-auto text-center">
+                            View on GitHub
+                        </a>
+                    </div>
+                     <div class="h-64 md:h-full">
+                        <!-- CORRECTED: Pointing this to your local islandpic.jpeg file -->
+                        <img src="pictures/islandpic.jpeg" 
+                             alt="Screenshot of the Dwive project" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- You can add more project cards here as you build more things! -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">Core Competencies</h2>
+             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Transferable Skills -->
+                <div class="skill-card p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Discipline & Drive</h3>
+                    <p class="text-gray-400">From law enforcement and fitness, I bring a structured, goal-oriented mindset to every project.</p>
+                </div>
+                <div class="skill-card p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Problem Solving</h3>
+                    <p class="text-gray-400">Adept at analyzing complex situations and devising effective, logical solutions under pressure.</p>
+                </div>
+                 <!-- Technical Skills -->
+                <div class="skill-card p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Web Fundamentals</h3>
+                    <p class="text-gray-400">Proficient in HTML5, CSS3, and JavaScript (ES6+) to build responsive websites.</p>
+                </div>
+                <div class="skill-card p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold text-white mb-2">Future-Focused</h3>
+                    <p class="text-gray-400">Eagerly learning frameworks like React and back-end technologies like Node.js and Python.</p>
+                </div>
+             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+                I'm actively seeking opportunities for internships and entry-level developer roles where I can contribute, learn, and grow. If you think my unique background and drive would be a good fit for your team, I'd love to hear from you.
+            </p>
+            <a href="mailto:your.email@example.com" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors">
+                Say Hello
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                 <a href="https://github.com/Myonawalcott" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">GitHub</a>
+                 <!-- LinkedIn profile URL updated -->
+                 <a href="https://www.linkedin.com/in/myon-walcott-a69a87371/" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Myon Walcott. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
